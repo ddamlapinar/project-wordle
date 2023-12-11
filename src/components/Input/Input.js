@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Input({handleSubmitGuess}) {
+function Input({ handleSubmitGuess, disabled }) {
   const [guess, setGuess] = useState("");
 
   function handleSubmit(e) {
@@ -20,6 +20,7 @@ function Input({handleSubmitGuess}) {
       <input
         value={guess}
         id="guess-input"
+        disabled={disabled}
         onChange={(e) => handleInputChange(e)}
         type="text"
         title="Input must be up to 5 characters"
